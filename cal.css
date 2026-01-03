@@ -20,7 +20,7 @@ body {
     transition: .3s;
     box-shadow: 0px 9px 40px rgb(0, 0, 0);
     rotate: .2deg;
-    
+
 
 }
 
@@ -79,31 +79,46 @@ body {
 
 .input .val {
     border: none;
-    background-color: #033350;
-    color: #12d456;
+    background-color: #3a4e59;
+    color: #000000;
     caret-color: #12d456;
     height: 30px;
     font-size: 26px;
     text-align: right;
     border-radius: 0px 0px 10px 10px;
-    box-shadow: inset 0 5px 13px black;
+    box-shadow: inset 0 -5px 20px #141c21;
+
 }
 
 .output .result {
     margin-top: 10px;
-    background-color: #12d456;
+    background-color: #3a5941;
     color: #032250;
-
     height: 50px;
     font-size: 36px;
     border-radius: 10px 10px 0px 0px;
     text-align: right;
-    box-shadow: 0 0 100px #12d456;
+    box-shadow: inset 0 8px 20px #0a0f0b;
 
 }
 
-
-
 .output ::placeholder {
+    color: #032250;
+}
+
+.calculator:hover .output .result {
+    transition: .4s;
+    box-shadow: 0 0 60px #12d456;
+    background-color: #12d456;
+}
+
+.calculator:hover .input .val {
+    box-shadow: inset 0 5px 13px black;
+    background-color: #3f6658;
+    transition: .4s;
+}
+
+.calculator:hover .output ::placeholder {
+    transition: .6s;
     color: #0322506d;
 }
