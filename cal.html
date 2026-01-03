@@ -6,15 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="cal.css">
 
 <body>
-    <div class="output">
-        <input type="text" name="output" placeholder="Results" readonly>
-    </div>
-    <div class="input">
-        <input type="text" name="input" placeholder="0">
+    <div class="textboxes">
+
+        <div class="output">
+            <input type="text" class="result" name="output" placeholder="0" readonly>
+        </div>
+        <div class="input">
+            <input type="text" class="value" name="input" placeholder="1">
+        </div>
     </div>
 
+    <div class="btn">
+        <div class="row rone">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+        </div>
+        <div class="row rtwo">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+        </div>
+        <div class="row rthree">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+        </div>
+        <div class="row rfour">
+            <button>C</button>
+            <button>0</button>
+            <button>.</button>
+            <button>+</button>
+        </div>
+        <div class="equal">
+            <button>=</button>
+        </div>
+    </div>
+    <script src="cal.js"></script>
 </body>
 
 </html>
