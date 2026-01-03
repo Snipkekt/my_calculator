@@ -2,7 +2,6 @@
 const inputBox=document.querySelector(".val");
 const resultBox=document.querySelector(".result");
 const buttons=document.querySelectorAll(".btn button");
-
 buttons.forEach(button=>{
     button.addEventListener("click",function(){
         const val=this.innerText;
@@ -11,12 +10,20 @@ buttons.forEach(button=>{
             resultBox.value="0";
         }else if(val==="="){
             try{
-                resultBox.value =eval(inputBox.value);
-    }
+                const res=eval(inputBox.value);
+                if(res===Infinity || res===-Infinity){
+                    resultBox.value="Error";
+                    return;
+                }
+                resultBox.value =res;
+            }
             catch(e){
                 resultBox.value="Error";
             }
-        }else{
+           
+        }
+
+        else{
             inputBox.value+=val;
         }
     });
