@@ -102,10 +102,8 @@ body {
 
 }
 
-.input ::placeholder {
-    color: #12d456;
-}
+
 
 .output ::placeholder {
-    color: #032250;
+    color: #0322506d;
 }
