@@ -1,4 +1,3 @@
-
 const evaluate = (expr) => {
     expr = expr.replace(/\s/g, '');
     const tokens = [];
@@ -51,32 +50,14 @@ const evaluate = (expr) => {
     return result;
 };
 
-const inputBox = document.querySelector(".val");
-const resultBox = document.querySelector(".result");
-const buttons = document.querySelectorAll(".btn button");
-buttons.forEach(button => {
-    button.addEventListener("click", function () {
-        const val = this.innerText;
-        if (val === "C") {
-            inputBox.value = "";
-            resultBox.value = "0";
-        } else if (val === "=") {
-            try {
-                const res = evaluate(inputBox.value);
-                if (res === Infinity || res === -Infinity || isNaN(res)) {
-                    resultBox.value = "Error";
-                    return;
-                }
-                resultBox.value = res;
-            }
-            catch (e) {
-                resultBox.value = "Error";
-            }
-
-        }
-
-        else {
-            inputBox.value += val;
-        }
-    });
-});
+// Tests
+console.log(evaluate('1+2')); // 3
+console.log(evaluate('2*3+1')); // 7
+console.log(evaluate('1+2*3')); // 7
+console.log(evaluate('10/2')); // 5
+console.log(evaluate('1.5+2.5')); // 4
+try {
+    console.log(evaluate('1/0'));
+} catch (e) {
+    console.log('Error:', e.message);
+}
