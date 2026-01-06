@@ -71,6 +71,9 @@ body {
 }
 
 .input .val {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+
     border: none;
     background-color: #3a4e59;
     color: #000000;
@@ -84,6 +87,8 @@ body {
 }
 
 .output .result {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     margin-top: 10px;
     background-color: #3a5941;
     color: #00280d;
@@ -96,7 +101,7 @@ body {
 }
 
 .output ::placeholder {
-    color: #032250;
+    color: #142118;
 }
 
 .calculator:hover .output .result {
